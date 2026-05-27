@@ -1,1 +1,23 @@
 
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mk-pixel"
+version = "0.1.0"
+description = "CLI tool that generates procedural textures from text prompts."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+dependencies = [
+    "numpy>=1.24",
+    "Pillow>=10.0",
+    "noise>=1.2",
+]
+
+[project.scripts]
+mkpixel = "mkpixel.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
